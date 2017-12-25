@@ -31,6 +31,8 @@ setup(
         ]
     ),
     install_requires = (
+        'futures',
         'python-chess',
+        'requests',
     ),
 )
