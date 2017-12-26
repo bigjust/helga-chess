@@ -34,11 +34,11 @@ def next_game_stats(channel_or_nick):
         [('round', pymongo.ASCENDING)]
     )
 
-    if not ordered_games:
+    try:
+        last_game = ordered_games[-1]
+    except IndexError:
         # start with level 0 for the 1st game
         return (1, 0)
-
-    last_game = ordered_games[-1]
 
     next_round = last_game['round'] + 1
     last_result = last_game.headers['Result']
