@@ -10,6 +10,11 @@ uses stockfish (or any UCI-compliant backend).
 
 Requires access to Amazon SES
 
+Installation
+============
+
+`apt install stockfish`
+
 License
 -------
 
